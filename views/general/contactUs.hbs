@@ -1,0 +1,20 @@
+<h1>Contact Us Page</h1>
+<form method="post" action="/contact-us">
+    <label for="firstName">First Name*</label>
+    <input type="text" id="firstName" name="firstName" value="{{values.firstName}}" /><br />
+    
+    {{#if validationMessages.firstName}}
+        <span style="color: red;">{{validationMessages.firstName}}</span><br />
+    {{/if}}
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" value="{{values.lastName}}" /><br />
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" value="{{values.email}}" /><br />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message">{{values.message}}</textarea><br />
+
+    <input type="submit" value="Contact Us" />
+</form>
